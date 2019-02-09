@@ -1,5 +1,7 @@
 {
   "name": "nubeharnina",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "393465835154",
+    "firebase_url": "https://nubeharnina.firebaseio.com",
+    "project_id": "nubeharnina",
+    "storage_bucket": "nubeharnina.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393465835154:android:088713312b0ab332",
+        "android_client_info": {
+          "package_name": "io.nube.harnina"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393465835154-3nlgrjlgv6a84mgnsvqahmeusgr81g87.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.nube.harnina",
+            "certificate_hash": "6dd0957c752c2b4cf030520a9357f4eb809b34c5"
+          }
+        },
+        {
+          "client_id": "393465835154-f1gugd4puv9tc1sns12buh8q4k7teokp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjkjv8cOQl71sCmQUje0VKXJCsL8Kd1DI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393465835154-f1gugd4puv9tc1sns12buh8q4k7teokp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
