@@ -1,7 +1,6 @@
+import { LoginOrCreateUserPage } from './../login-or-create-user/login-or-create-user';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Firebase } from '@ionic-native/firebase';
-import { FirebaseAuthentication } from '@ionic-native/firebase-authentication';
 
 @Component({
   selector: 'page-home',
@@ -9,30 +8,18 @@ import { FirebaseAuthentication } from '@ionic-native/firebase-authentication';
 })
 export class HomePage {
 
-  email: string;
-  password: string;
-  respuesta:any;
-  constructor(public navCtrl: NavController,public Firebase:Firebase, public firebaseAuthentication: FirebaseAuthentication) {
+  private nombreSiguientePagina:string = "PONER LA SIGUIENTE AQUI";
+  
+  constructor(public navCtrl: NavController) {
+    
+  }
+
+  createUser() {
+    this.navCtrl.push(LoginOrCreateUserPage,{"action":"create","nombreSiguientePagina":this.nombreSiguientePagina});
   }
 
   signIn() {
-    this.firebaseAuthentication.createUserWithEmailAndPassword(this.email, this.password).then((res: any) => {
-        console.log(res);
-        this.respuesta = res;
-      }).catch((error: any) =>{
-         console.error("soy el error "+error);
-         this.respuesta = error;
-      })
-  }
-
-  logIn(){
-		this.firebaseAuthentication.signInWithEmailAndPassword(this.email,this.password).then((res:any)=>{
-      console.info(res);
-      this.respuesta = res;
-    }).catch((error:any)=>{
-      console.info(error);
-      this.respuesta = error;
-    })
+    this.navCtrl.push(LoginOrCreateUserPage,{"action":"signIn","nombreSiguientePagina":this.nombreSiguientePagina});
   }
 
 }

@@ -13,17 +13,13 @@
   </p>
 
   <ion-item> 
-    <ion-label>email</ion-label>
-    <ion-input type="text" [(ngModel)]="email"></ion-input>
+    <ion-label>Nuevo usuario</ion-label>
+    <button ion-button (click)="createUser()">createUser</button>
   </ion-item>
 
-  <ion-item *ngIf="email!=null"> 
-    <ion-label>password</ion-label>
-    <ion-input type="text" [(ngModel)]="password"></ion-input>
+  <ion-item> 
+    <ion-label>Iniciar sesion</ion-label>
+    <button ion-button (click)="signIn()">signIn</button>
   </ion-item>
-
-  <button ion-button (click)="signIn()" *ngIf="password!=null">sign in</button>
-  <button ion-button (click)="logIn()" *ngIf="password!=null">sign in</button>
-  <ion-label *ngIf="respuesta!=null">{{respuesta}}</ion-label>
-
+  
 </ion-content>
