@@ -1,4 +1,4 @@
-import { FirebaseAuthenticationProvider } from './../../providers/firebase-authentication/firebase-authentication';
+import { LoginOrCreateUserPage } from './../login-or-create-user/login-or-create-user';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -8,26 +8,18 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  email: string;
-  password: string;
-  respuesta:any;
-  constructor(public navCtrl: NavController,public authProvider:FirebaseAuthenticationProvider) {
+  private nombreSiguientePagina:string = "PONER LA SIGUIENTE AQUI";
+  
+  constructor(public navCtrl: NavController) {
+    
   }
 
   createUser() {
-    this.authProvider.createUser(this.email, this.password).then(()=>{
-      this.respuesta = "registrado con exito";
-    }).catch((error)=>{
-      this.respuesta = error;
-    })
+    this.navCtrl.push(LoginOrCreateUserPage,{"action":"create","nombreSiguientePagina":this.nombreSiguientePagina});
   }
 
-  signIn(){
-		this.authProvider.signIn(this.email, this.password).then(()=>{
-      this.respuesta = "session iniciada";
-    }).catch((error)=>{
-      this.respuesta = error;
-    })
+  signIn() {
+    this.navCtrl.push(LoginOrCreateUserPage,{"action":"signIn","nombreSiguientePagina":this.nombreSiguientePagina});
   }
 
 }

@@ -9,11 +9,13 @@ import {Firebase} from '@ionic-native/firebase';
 import {FirebaseAuthentication} from '@ionic-native/firebase-authentication';
 import { FirebaseAuthentificationMockProvider } from '../providers/firebase-authentification-mock/firebase-authentification-mock';
 import { FirebaseAuthenticationProvider } from '../providers/firebase-authentication/firebase-authentication';
+import { LoginOrCreateUserPage } from '../pages/login-or-create-user/login-or-create-user';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginOrCreateUserPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { FirebaseAuthenticationProvider } from '../providers/firebase-authentica
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginOrCreateUserPage
   ],
   providers: [
     StatusBar,Firebase,FirebaseAuthentication,FirebaseAuthentificationMockProvider,

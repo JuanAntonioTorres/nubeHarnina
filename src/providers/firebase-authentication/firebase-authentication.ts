@@ -4,13 +4,17 @@ import { Firebase } from '@ionic-native/firebase';
 import { FirebaseAuthentication } from '@ionic-native/firebase-authentication';
 
 /*
-  Generated class for the FirebaseAuthenticationProvider provider.
+Generated class for the FirebaseAuthenticationProvider provider.
 
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
+See https://angular.io/guide/dependency-injection for more info on providers
+and Angular DI.
 */
 @Injectable()
 export class FirebaseAuthenticationProvider {
+  
+  constructor(public http: HttpClient, public Firebase: Firebase, public firebaseAuthentication: FirebaseAuthentication) {
+    console.log('Hello FirebaseAuthenticationProvider Provider');
+  }
 
   signIn(email: string, password: string): any {
     return new Promise((resolve, reject) => {
@@ -32,8 +36,5 @@ export class FirebaseAuthenticationProvider {
     })
   }
 
-  constructor(public http: HttpClient,, public Firebase: Firebase, public firebaseAuthentication: FirebaseAuthentication) {
-    console.log('Hello FirebaseAuthenticationProvider Provider');
-  }
 
 }
