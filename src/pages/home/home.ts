@@ -1,6 +1,6 @@
-import { LoginOrCreateUserPage } from './../login-or-create-user/login-or-create-user';
+import { RegisterPage } from './../register/register';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -8,18 +8,17 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  private nombreSiguientePagina:string = "PONER LA SIGUIENTE AQUI";
-  
-  constructor(public navCtrl: NavController) {
-    
+  constructor(public navCtrl: NavController,public navParams:NavParams) {
   }
 
   createUser() {
-    this.navCtrl.push(LoginOrCreateUserPage,{"action":"create","nombreSiguientePagina":this.nombreSiguientePagina});
+    this.navParams.data.action="create";
+    this.navCtrl.push(RegisterPage,this.navParams);
   }
 
   signIn() {
-    this.navCtrl.push(LoginOrCreateUserPage,{"action":"signIn","nombreSiguientePagina":this.nombreSiguientePagina});
+    this.navParams.data.action="signIn";
+    this.navCtrl.push(RegisterPage,this.navParams);
   }
 
 }
