@@ -22,8 +22,8 @@
     <ion-input type="text" [(ngModel)]="password"></ion-input>
   </ion-item>
 
+  <button ion-button (click)="createUser()" *ngIf="password!=null">sign in</button>
   <button ion-button (click)="signIn()" *ngIf="password!=null">sign in</button>
-  <button ion-button (click)="logIn()" *ngIf="password!=null">sign in</button>
   <ion-label *ngIf="respuesta!=null">{{respuesta}}</ion-label>
 
 </ion-content>

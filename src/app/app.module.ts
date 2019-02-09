@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import {Firebase} from '@ionic-native/firebase';
 import {FirebaseAuthentication} from '@ionic-native/firebase-authentication';
 import { FirebaseAuthentificationMockProvider } from '../providers/firebase-authentification-mock/firebase-authentification-mock';
+import { FirebaseAuthenticationProvider } from '../providers/firebase-authentication/firebase-authentication';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FirebaseAuthentificationMockProvider } from '../providers/firebase-auth
   providers: [
     StatusBar,Firebase,FirebaseAuthentication,FirebaseAuthentificationMockProvider,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FirebaseAuthenticationProvider
   ]
 })
 export class AppModule {}
